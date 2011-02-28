@@ -1,5 +1,5 @@
 === Searchable Categories ===
-Contributors: Jason Corradino
+Contributors: jcorradino
 Tags: admin, administration, meta, dashboard, post
 Requires at least: 3.1
 Tested up to: 3.1
