@@ -3,7 +3,7 @@ Contributors: Jason Corradino
 Tags: admin, administration, meta, dashboard, post
 Requires at least: 3.1
 Tested up to: 3.1
-Stable: trunk
+Stable tag: trunk
 
 Searchable Categories allows a quick real-time search through categories while selecting in new post/edit post view.
 
