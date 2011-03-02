@@ -24,4 +24,4 @@ This plugin will make it quick and easy for your writers to select categories re
 
 == Changelog ==
 
-
+v 0.2 - Updated to show subcategories of search results as well.

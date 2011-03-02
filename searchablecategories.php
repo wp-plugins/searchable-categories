@@ -2,7 +2,7 @@
 /*
 Plugin Name: Back End Category Search
 Description: A back end search module which replaces the category selector in the Edit/Add post page to include searching categories
-Version: 0.1
+Version: 0.2
 Author: Jason Corradino
 Author URI: http://imyourdeveloper.com/
 License: GPLv2 or later
@@ -19,11 +19,15 @@ function searchable_category_meta_box( $post, $box ) {
 	?>
 		<script type="text/javascript">
 			jQuery(document).ready(function(){
-				jQuery('#catSearch').keyup(function(){
-					var val = jQuery('#catSearch').val();
-					jQuery('#categorychecklist li').hide();
-					jQuery('#categorychecklist').find(":contains('"+val+"')").show();
-				});
+				jQuery('#catSearch').keyup(function() {
+			        var val = jQuery('#catSearch').val(),
+			            lis = jQuery("#categorychecklist li");
+			        lis.hide();
+			        // find li labels's containing term, then back to parent li
+			        var containingLabels = jQuery("#categorychecklist label:contains('" + val + "')");
+			        containingLabels.closest('li').find('li').andSelf().show();
+			        containingLabels.parents('#categorychecklist li').show();
+			    });
 			});
 		</script>
 	<div id="taxonomy-<?php echo $taxonomy; ?>" class="categorydiv">
